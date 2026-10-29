@@ -431,3 +431,56 @@ footer > a:last-child {
   }
 }
 
+/* Tydligare, mjuka färgövergångar mellan kapitlen */
+
+.chapter {
+  position: relative;
+  isolation: isolate;
+  background: transparent;
+}
+
+.chapter::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  inset: -100px 0;
+  background: linear-gradient(
+    to bottom,
+    var(--blend-top, #202c25) 0%,
+    var(--chapter-color, #202c25) 30%,
+    var(--chapter-color, #202c25) 70%,
+    var(--blend-bottom, #263642) 100%
+  );
+}
+
+.chapter-portratt {
+  --blend-top: #171b18;
+  --chapter-color: #26352b;
+  --blend-bottom: #293a3e;
+}
+
+.chapter-stad {
+  --blend-top: #293a3e;
+  --chapter-color: #2c414f;
+  --blend-bottom: #44352f;
+}
+
+.chapter-kvallar {
+  --blend-top: #44352f;
+  --chapter-color: #583626;
+  --blend-bottom: #635b48;
+}
+
+.chapter-resor {
+  --blend-top: #635b48;
+  --chapter-color: #74735b;
+  --blend-bottom: #827664;
+}
+
+.chapter-ovrigt {
+  --blend-top: #827664;
+  --chapter-color: #716a59;
+  --blend-bottom: #20221d;
+}
+
