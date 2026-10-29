@@ -857,3 +857,45 @@ footer > a:last-child {
     padding: 85px 20px 55px;
   }
 }
+
+/* Mobil: mjuka färgövergångar mellan kapitlen */
+@media (max-width: 600px) {
+  .chapter::before {
+    inset: -45px 0;
+    background: linear-gradient(
+      to bottom,
+      var(--blend-top, #202c25) 0%,
+      var(--chapter-color, #202c25) 35%,
+      var(--chapter-color, #202c25) 70%,
+      var(--blend-bottom, #263642) 100%
+    );
+  }
+
+  /* Behåll den långsamma, filmiska bildanimationen */
+  .gallery .photo {
+    opacity: 0;
+    transform: translateY(55px) scale(0.97);
+    filter: blur(3px);
+    transition:
+      opacity 1.4s ease,
+      transform 1.4s cubic-bezier(0.16, 1, 0.3, 1),
+      filter 1.2s ease;
+    will-change: opacity, transform, filter;
+  }
+
+  .gallery .photo.is-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* Respektera inställning för minskad rörelse */
+@media (prefers-reduced-motion: reduce) {
+  .gallery .photo {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+  }
+}
