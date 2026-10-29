@@ -754,3 +754,106 @@ footer > a:last-child {
     gap: 20px 9px;
   }
 }
+
+/* MOBILFIX – Yayas Arkiv */
+@media (max-width: 600px) {
+
+  /* Kompaktare meny */
+  .site-header {
+    height: 62px;
+    padding: 0 14px;
+    gap: 12px;
+    background: rgba(23, 27, 24, 0.92);
+    backdrop-filter: blur(12px);
+  }
+
+  .logo {
+    font-size: 14px;
+  }
+
+  .site-header nav {
+    gap: 11px;
+    overflow-x: auto;
+    justify-content: flex-start;
+    scrollbar-width: none;
+  }
+
+  .site-header nav a {
+    font-size: 7px;
+    letter-spacing: 0.04em;
+  }
+
+  /* Mindre tomrum runt kapitlen */
+  .chapter {
+    padding: 58px 18px 72px;
+    scroll-margin-top: 62px;
+  }
+
+  .chapter-heading {
+    margin-bottom: 22px;
+  }
+
+  /* Tätare galleri utan stora hål */
+  .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px 10px;
+    align-items: start;
+  }
+
+  .gallery .photo {
+    grid-column: auto !important;
+    width: 100%;
+    margin-top: 0 !important;
+    aspect-ratio: 3 / 4 !important;
+  }
+
+  /* Variera storleken lite, men håll rutnätet tätt */
+  .gallery .photo:nth-child(3n + 2) {
+    aspect-ratio: 3 / 3.5 !important;
+  }
+
+  /* Sista bilden ska inte bli ensam och jättestor */
+  .gallery .photo:last-child {
+    grid-column: auto !important;
+    width: 100%;
+    margin-top: 0 !important;
+    aspect-ratio: 3 / 4 !important;
+  }
+
+  /* Se till att sektionerna inte klipper innehållet */
+  main {
+    overflow: visible;
+  }
+
+  .chapter::before {
+    inset: 0;
+  }
+
+  /* Om-sektionen */
+  .about {
+    padding: 60px 20px 72px;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .about h2 {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .about p {
+    font-size: 25px;
+    line-height: 1.4;
+  }
+
+  footer {
+    padding: 24px 20px;
+  }
+
+  /* Lite mindre hero på telefon */
+  .hero {
+    min-height: 560px;
+    height: 84svh;
+    padding: 85px 20px 55px;
+  }
+}
