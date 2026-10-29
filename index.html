@@ -137,6 +137,27 @@
     });
   }
 </script>
+  <script>
+  // Öppna alltid arkivet från toppen vid ett nytt sidbesök
+  if (window.location.hash) {
+    history.replaceState(
+      null,
+      "",
+      window.location.pathname + window.location.search
+    );
+  }
+
+  window.addEventListener("pageshow", function (event) {
+    if (window.location.hash === "#om") {
+      history.replaceState(
+        null,
+        "",
+        window.location.pathname + window.location.search
+      );
+      window.scrollTo(0, 0);
+    }
+  });
+</script>
 </body>
 </html>
 
