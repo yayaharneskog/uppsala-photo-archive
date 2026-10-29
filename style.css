@@ -610,3 +610,147 @@ footer > a:last-child {
   }
 }
 }
+
+/* MOBIL: renare layout för Yayas Arkiv */
+@media (max-width: 600px) {
+
+  /* Header: låt menyn rymmas på små skärmar */
+  .site-header {
+    height: 64px;
+    padding: 0 14px;
+    gap: 12px;
+  }
+
+  .logo {
+    font-size: 15px;
+    white-space: nowrap;
+  }
+
+  .site-header nav {
+    flex: 1;
+    min-width: 0;
+    justify-content: flex-end;
+    gap: 14px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+  }
+
+  .site-header nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .site-header nav a {
+    font-size: 8px;
+    letter-spacing: 0.04em;
+  }
+
+  .about-link {
+    display: none;
+  }
+
+  /* Hero: bättre proportioner på iPhone */
+  .hero {
+    min-height: 580px;
+    height: 88svh;
+    padding: 90px 20px 60px;
+    background-position: 58% center;
+  }
+
+  .hero h1 {
+    font-size: clamp(44px, 11vw, 68px);
+    overflow-wrap: anywhere;
+  }
+
+  .scroll-note {
+    left: 20px;
+    bottom: 28px;
+  }
+
+  /* Galleriet: två balanserade kolumner */
+  .chapter {
+    padding: 70px 20px 85px;
+  }
+
+  .chapter-heading {
+    margin-bottom: 26px;
+  }
+
+  .chapter-heading h2 {
+    font-size: 32px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 26px 12px;
+    align-items: start;
+  }
+
+  /* Ta bort gamla kolumnplaceringar från datorlayouten */
+  .gallery .photo {
+    grid-column: auto;
+    width: 100%;
+    min-width: 0;
+    margin-top: 0;
+  }
+
+  /* Variera höjderna utan att skapa stora hål */
+  .gallery .photo:nth-child(odd) {
+    aspect-ratio: 3 / 4.1;
+  }
+
+  .gallery .photo:nth-child(even) {
+    aspect-ratio: 3 / 3.5;
+    margin-top: 24px;
+  }
+
+  /* Sista bilden blir ett medvetet avslut,
+     i stället för att ligga ensam i ett hörn */
+  .gallery .photo:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 82%;
+    aspect-ratio: 4 / 3;
+    margin-top: 8px;
+  }
+
+  /* Om-texten blir lättare att läsa */
+  .about {
+    padding: 65px 20px 75px;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .about p {
+    font-size: 25px;
+    line-height: 1.45;
+  }
+
+  footer {
+    padding: 24px 20px;
+  }
+}
+
+/* Extra små iPhones */
+@media (max-width: 380px) {
+  .site-header {
+    padding: 0 10px;
+    gap: 9px;
+  }
+
+  .logo {
+    font-size: 13px;
+  }
+
+  .site-header nav {
+    gap: 10px;
+  }
+
+  .site-header nav a {
+    font-size: 7px;
+  }
+
+  .gallery {
+    gap: 20px 9px;
+  }
+}
