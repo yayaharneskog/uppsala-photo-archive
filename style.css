@@ -584,8 +584,26 @@ footer > a:last-child {
     transition: none;
   }
 }
-/* Tillfällig fix: visa alla bildrutor igen */
+/* Bilderna ploppar in när man scrollar */
 .gallery .photo {
-  opacity: 1 !important;
-  transform: none !important;
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.gallery .photo.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Visa bilderna direkt om besökaren föredrar mindre rörelse */
+@media (prefers-reduced-motion: reduce) {
+  .gallery .photo {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
 }
