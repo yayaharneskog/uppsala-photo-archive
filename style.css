@@ -584,4 +584,8 @@ footer > a:last-child {
     transition: none;
   }
 }
-
+/* Tillfällig fix: visa alla bildrutor igen */
+.gallery .photo {
+  opacity: 1 !important;
+  transform: none !important;
+}
