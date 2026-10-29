@@ -128,7 +128,7 @@
     });
 
     photos.forEach((photo, index) => {
-      photo.style.transitionDelay = `${(index % 3) * 100}ms`;
+      photo.style.transitionDelay = `${(index % 3) * 120}ms`;
       observer.observe(photo);
     });
   } else {
