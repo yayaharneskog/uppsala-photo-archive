@@ -186,8 +186,9 @@ main {
 .chapter-heading h2,
 .about h2 {
   margin: 0;
-  font: 400 clamp(34px, 5vw, 58px)/1.1 var(--serif);
-  letter-spacing: -.035em;
+  font: 400 clamp(28px, 3.5vw, 42px)/1.15 var(--serif);
+  letter-spacing: -.025em;
+}
 }
 
 .gallery {
