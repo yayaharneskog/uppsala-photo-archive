@@ -484,3 +484,104 @@ footer > a:last-child {
   --blend-bottom: #20221d;
 }
 
+/* Levande, asymmetriskt bildgalleri */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: clamp(12px, 2vw, 28px);
+  align-items: start;
+}
+
+.gallery .photo {
+  width: 100%;
+  min-width: 0;
+  margin-top: 0;
+}
+
+/* Variera bredd och höjd */
+.gallery .photo:nth-child(1) {
+  grid-column: span 2;
+  aspect-ratio: 3 / 4.2;
+}
+
+.gallery .photo:nth-child(2) {
+  grid-column: span 2;
+  aspect-ratio: 3 / 3.4;
+  margin-top: 55px;
+}
+
+.gallery .photo:nth-child(3) {
+  grid-column: span 2;
+  aspect-ratio: 3 / 4.6;
+  margin-top: 15px;
+}
+
+.gallery .photo:nth-child(4) {
+  grid-column: span 3;
+  aspect-ratio: 4 / 3.3;
+  margin-top: 20px;
+}
+
+.gallery .photo:nth-child(5) {
+  grid-column: span 2;
+  aspect-ratio: 3 / 4;
+  margin-top: 65px;
+}
+
+.gallery .photo:nth-child(6) {
+  grid-column: span 3;
+  aspect-ratio: 4 / 3;
+  margin-top: -10px;
+}
+
+/* Smidig rörelse vid scrollning */
+.gallery .photo {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity .8s ease,
+    transform .8s cubic-bezier(.2, .7, .2, 1),
+    filter .5s ease;
+}
+
+.gallery .photo.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mindre skärmar */
+@media (max-width: 700px) {
+  .gallery {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .gallery .photo:nth-child(1),
+  .gallery .photo:nth-child(3),
+  .gallery .photo:nth-child(5) {
+    grid-column: span 2;
+  }
+
+  .gallery .photo:nth-child(2),
+  .gallery .photo:nth-child(4),
+  .gallery .photo:nth-child(6) {
+    grid-column: span 2;
+  }
+
+  .gallery .photo:nth-child(2),
+  .gallery .photo:nth-child(3),
+  .gallery .photo:nth-child(5) {
+    margin-top: 25px;
+  }
+}
+
+/* Respektera inställningar för minskad rörelse */
+@media (prefers-reduced-motion: reduce) {
+  .gallery .photo {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
