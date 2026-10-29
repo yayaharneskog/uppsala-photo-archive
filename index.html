@@ -1,32 +1,114 @@
+
 <!doctype html>
 <html lang="sv">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Uppsala / Photo Archive</title>
+  <meta name="theme-color" content="#171b18">
+  <meta name="description" content="Yayas Arkiv — ett personligt fotografiskt arkiv.">
+  <title>Yayas Arkiv</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header><a class="logo" href="#top">Uppsala <span>/</span></a><nav><a href="#top">home</a><a href="#series">series</a><a href="#about">about</a></nav></header>
+  <header class="site-header">
+    <a class="logo" href="#top">Yayas Arkiv</a>
+
+    <nav aria-label="Huvudmeny">
+      <a href="#portratt">Porträtt</a>
+      <a href="#stad">Stad</a>
+      <a href="#kvallar">Kvällar</a>
+      <a href="#resor">Resor</a>
+      <a href="#ovrigt">Övrigt</a>
+    </nav>
+
+    <a class="about-link" href="#om">Om</a>
+  </header>
+
   <main id="top">
     <section class="hero">
-      <div class="hero-copy"><small>PHOTO ARCHIVE / UPPSALA</small><h1>Uppsala</h1><p>A photographic archive of student life, late nights and the in-between.</p></div>
+      <div class="hero-image" role="img"
+        aria-label="Stämningsfullt porträtt i kvällsljus"></div>
+      <div class="hero-copy">
+        <h1>Yayas Arkiv</h1>
+      </div>
+      <a class="scroll-note" href="#portratt">Scrolla ner ↓</a>
     </section>
-    <section id="series">
-      <div class="heading"><div><small>SELECTED WORK</small><h2>Series</h2></div><span> A living archive · 2026—</span></div>
-      <div class="grid">
-        <article><div class="photo city"></div><small>01 / CITY</small><h3>After Hours</h3><p class="tags">City / Night / Atmosphere</p><p>Wet streets, bikes, warm windows and people on their way somewhere.</p></article>
-        <article><div class="photo study"></div><small>02 / ROUTINE</small><h3>02:17 AM</h3><p class="tags">Study / Solitude / Routine</p><p>Coffee, notes, screens and the strange hours when the city is quiet.</p></article>
-        <article><div class="photo party"></div><small>03 / PEOPLE</small><h3>Nothing Special, Actually</h3><p class="tags">Friends / Parties / Moments</p><p>Pre-drinks, crowded kitchens, blurry frames and nights that blur together.</p></article>
-        <article><div class="photo portrait"></div><small>04 / PORTRAIT</small><h3>A Person, For a While</h3><p class="tags">Portrait / Everyday / Uppsala</p><p>Following one person through ordinary days and the people around them.</p></article>
-        <article><div class="photo traces"></div><small>05 / HOME</small><h3>Traces</h3><p class="tags">Home / Objects / Belonging</p><p>The small evidence of a life being lived: dishes, notes, coats and shared rooms.</p></article>
-        <article><div class="photo lecture"></div><small>06 / SPACES</small><h3>Between Lectures</h3><p class="tags">Spaces / Light / Stillness</p><p>Empty lecture halls, forgotten papers and the quiet moments in between.</p></article>
-        <article><div class="photo move"></div><small>07 / TRANSIT</small><h3>On the Move</h3><p class="tags">Transport / Distance / Transition</p><p>Buses, trains, bikes and the feeling of always being on the way.</p></article>
-        <div class="more">More series<br>coming soon.<br><b>↗</b></div>
+
+    <section id="portratt" class="chapter chapter-portratt">
+      <div class="chapter-heading">
+        <h2>Porträtt</h2>
+      </div>
+      <div class="gallery">
+        <div class="photo p1 tall" role="img" aria-label="Porträtt"></div>
+        <div class="photo p2 medium" role="img" aria-label="Person i kvällsljus"></div>
+        <div class="photo p3 short" role="img" aria-label="Intimt ögonblick"></div>
+        <div class="photo p4 tall" role="img" aria-label="Person vid ett fönster"></div>
+        <div class="photo p5 medium" role="img" aria-label="Vardagsporträtt"></div>
+        <div class="photo p6 short" role="img" aria-label="Möte mellan människor"></div>
       </div>
     </section>
-    <section id="about" class="about"><small>ABOUT THIS ARCHIVE</small><p>A personal collection of people, places and passing moments in Uppsala. Made slowly, one frame at a time.</p><small>Replace the sample gradients with your own photographs as the project grows.</small></section>
+
+    <section id="stad" class="chapter chapter-stad">
+      <div class="chapter-heading">
+        <h2>Stad</h2>
+      </div>
+      <div class="gallery">
+        <div class="photo c1 tall" role="img" aria-label="Regnig stadsgata"></div>
+        <div class="photo c2 medium" role="img" aria-label="Stad i skymning"></div>
+        <div class="photo c3 tall" role="img" aria-label="Byggnader i kvällsljus"></div>
+        <div class="photo c4 short" role="img" aria-label="Kollektivtrafik i rörelse"></div>
+        <div class="photo c5 medium" role="img" aria-label="Gata med gatlyktor"></div>
+      </div>
+    </section>
+
+    <section id="kvallar" class="chapter chapter-kvallar">
+      <div class="chapter-heading">
+        <h2>Kvällar</h2>
+      </div>
+      <div class="gallery">
+        <div class="photo n1 medium" role="img" aria-label="Vänner under en kväll"></div>
+        <div class="photo n2 tall" role="img" aria-label="Människa i nattljus"></div>
+        <div class="photo n3 short" role="img" aria-label="Detaljer från ett bord"></div>
+        <div class="photo n4 tall" role="img" aria-label="Porträtt på fest"></div>
+        <div class="photo n5 medium" role="img" aria-label="Ljussken i mörker"></div>
+      </div>
+    </section>
+
+    <section id="resor" class="chapter chapter-resor">
+      <div class="chapter-heading">
+        <h2>Resor</h2>
+      </div>
+      <div class="gallery">
+        <div class="photo r1 tall" role="img" aria-label="Landskap vid kusten"></div>
+        <div class="photo r2 medium" role="img" aria-label="Utsikt från ett fönster"></div>
+        <div class="photo r3 tall" role="img" aria-label="Gata i en annan stad"></div>
+        <div class="photo r4 short" role="img" aria-label="Vatten och berg"></div>
+        <div class="photo r5 medium" role="img" aria-label="Resa i kvällsljus"></div>
+      </div>
+    </section>
+
+    <section id="ovrigt" class="chapter chapter-ovrigt">
+      <div class="chapter-heading">
+        <h2>Övrigt</h2>
+      </div>
+      <div class="gallery">
+        <div class="photo o1 medium" role="img" aria-label="Skuggor på en vägg"></div>
+        <div class="photo o2 tall" role="img" aria-label="Detalj av ett rum"></div>
+        <div class="photo o3 short" role="img" aria-label="Kamera och fotografiska detaljer"></div>
+        <div class="photo o4 medium" role="img" aria-label="Ljus över vatten"></div>
+        <div class="photo o5 tall" role="img" aria-label="Ljus och texturer"></div>
+      </div>
+    </section>
+
+    <section id="om" class="about">
+      <h2>Om arkivet</h2>
+      <p>Ett pågående arkiv av fotografier.</p>
+    </section>
   </main>
-  <footer><a class="logo" href="#top">Uppsala <span>/</span></a><p>Same city. Different moments.</p><a href="mailto:hello@example.com">EMAIL ↗</a></footer>
+
+  <footer>
+    <a class="logo" href="#top">Yayas Arkiv</a>
+    <a href="#top">Till toppen ↑</a>
+  </footer>
 </body>
 </html>
