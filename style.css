@@ -911,3 +911,19 @@ footer > a:last-child {
   background-position: center !important;
   background-color: #111 !important;
 }
+/* Varmare analog känsla */
+body {
+  background-color: #f3eadc;
+  color: #49382f;
+  transition: background-color 1.2s ease, color 1.2s ease;
+}
+
+/* Mjukare färgövergångar */
+section {
+  transition: background-color 1.5s ease;
+}
+
+/* Lite mjukare känsla på bilderna */
+.photo {
+  transition: opacity 0.8s ease, filter 0.8s ease;
+}
