@@ -905,3 +905,9 @@ footer > a:last-child {
 .p1 {
   background-image: url("https://yayaharneskog.github.io/uppsala-photo-archive/ChatGPT-bild%2029%20okt.%202026%2020_56_59.jpg") !important;
 }
+.p1 {
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-color: #111 !important;
+}
